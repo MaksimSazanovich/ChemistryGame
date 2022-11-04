@@ -33,13 +33,12 @@ public class Randomazer : MonoBehaviour
 
     public void GetNumberOfRandom(int i)
     {
-        Debug.Log("qwerty");
         switch (i)
         {
-            case 0:
+            case 1:
                 numberOfRandom = 7;
                 break;
-            case 1:
+            case 2:
                 numberOfRandom = 6;
                 break;
 

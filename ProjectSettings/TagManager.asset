@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Hole
   - DeathZone
+  - Centre
+  - Destruction
   layers:
   - Default
   - TransparentFX
@@ -13,8 +15,8 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
+  - Ghost
+  - WeakFlask
   - 
   - 
   - 

@@ -24,6 +24,7 @@ public class Generator : MonoBehaviour
     [SerializeField] private int numberOfH;
     [SerializeField] private int numberOfS;
     [SerializeField] private int numberOfAl;
+    [SerializeField] private int numberOfCa;
     [SerializeField] private int sceneIndex;
     [SerializeField]  private int key;
     double imprecision = 0.000000001;
@@ -32,6 +33,7 @@ public class Generator : MonoBehaviour
     Player player;
     Main main;
     Randomazer randomazer;
+    Enemy enemy;
 
     // Randomazer randomazer;
     public double[] keeys = { 2.01e-07, 0.002000003, 1.0204e-05 };
@@ -43,6 +45,8 @@ public class Generator : MonoBehaviour
         main = FindObjectOfType<Main>();
         player = FindObjectOfType<Player>();
         randomazer = FindObjectOfType<Randomazer>();
+        enemy = FindObjectOfType<Enemy>();
+
         sceneIndex = SceneManager.GetActiveScene().buildIndex;
 
         randomazer.GetNumberOfRandom(sceneIndex);
@@ -97,6 +101,7 @@ public class Generator : MonoBehaviour
                 break;
             case 3:
                 result += Ca;
+                numberOfCa--;
                 Debug.Log(result);
                 CheckAtom();
                 CheckWin();
@@ -185,5 +190,12 @@ public class Generator : MonoBehaviour
             else nowResult = result;
     }
 
-  
+    //public void CheckAtomToDestroy()
+    //{
+    //    if (numberOfAl < 0 || numberOfH < 0 || numberOfO < 0 || numberOfS < 0)
+    //    {
+    //        enemy.DestroyAtom();
+    //    }
+    //}
+
 }
